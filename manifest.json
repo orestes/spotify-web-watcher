@@ -1,0 +1,40 @@
+{
+  "name": "Spotify Watcher",
+  "version": "0.0.1",
+  "description": "Watch over the Spotify Web Player and report the current song, artist and cover",
+  "manifest_version": 2,
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://cdn.firebase.com https://www.googleapis.com; object-src 'self'",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "48": "icons/48x48-green.png",
+    "128": "icons/128x128-green.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/48x48-white.png",
+      "32": "icons/48x48-white.png",
+      "48": "icons/48x48-white.png"
+    },
+    "default_title": "Spotify Web Watcher",
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "scripts": ["src/background/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://open.spotify.com/*"
+      ],
+      "js": [
+        "vendor/firebase-app.js",
+        "vendor/firebase-firestore.js",
+        "src/content-script/watch.js"
+      ]
+    }
+  ]
+}
+
