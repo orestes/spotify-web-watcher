@@ -76,6 +76,7 @@ const publishPendingUpdates = async () => {
     pendingUpdates.version = config.version;
     pendingUpdates.date = firebase.firestore.Timestamp.now();
     console.log('Updating', pendingUpdates);
+    // TODO: This should be done after authenticating with Firebase so we can enforce Firestore rules
     await firebase.firestore().collection(`users`).doc(userId).set(pendingUpdates, { merge: true });
     console.log('Saved', pendingUpdates);
 };
