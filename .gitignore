@@ -1,3 +1,4 @@
 *.zip
+.cache
 dist/*
 node_modules
