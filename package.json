@@ -1,0 +1,28 @@
+{
+  "name": "spotify-web-watcher",
+  "version": "1.0.0",
+  "description": "A Chrome Extension that watches the Spotify Web Player and reports what you are playing on a private web page.",
+  "main": "config.js",
+  "scripts": {
+    "build": "rm -Rf dist/*; cp manifest.json src/popup.html dist; cp -R icons dist; parcel build src/content.js src/popup.js src/background.js && node tools/replace-bad-character.js dist/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orestes/spotify-web-watcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC BY-4.0",
+  "bugs": {
+    "url": "https://github.com/orestes/spotify-web-watcher/issues"
+  },
+  "homepage": "https://github.com/orestes/spotify-web-watcher#readme",
+  "devDependencies": {
+    "firebase": "^7.14.2",
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}
