@@ -31,6 +31,13 @@ export class PopupHandler {
 
         if (!userId) {
             this.setText('Not configured');
+
+            this.getCopyButton().style.display = 'none';
+            this.getOpenButton().style.display = '';
+            this.getOpenButton().addEventListener('click', () => {
+                window.open('https://open.spotify.com');
+            });
+
             return;
         }
 
@@ -38,7 +45,15 @@ export class PopupHandler {
         this.setText(url);
 
         const callback = this.copyTextFactory(url);
-        document.querySelector('button').addEventListener('click', callback);
+        this.getCopyButton().addEventListener('click', callback);
+    }
+
+    getCopyButton() {
+        return document.querySelector('button.copy');
+    }
+
+    getOpenButton() {
+        return document.querySelector('button.open');
     }
 }
 
