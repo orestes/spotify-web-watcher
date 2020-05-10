@@ -1,8 +1,9 @@
 import {config} from "../config";
-import * as firebase from "firebase/app";
+import {setStoredValue} from "./utils";
+
 import 'firebase/auth';
 import 'firebase/firestore';
-import {setStoredValue} from "./utils";
+import * as firebase from "firebase/app";
 
 export class ContentHandler {
 

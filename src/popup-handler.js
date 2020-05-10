@@ -1,7 +1,7 @@
-import * as firebase from "firebase/app";
 import "firebase/auth";
+import * as firebase from "firebase/app";
 
-import { config } from '../config.js';
+import {config} from '../config.js';
 import {getStoredValue} from "./utils";
 
 export class PopupHandler {
