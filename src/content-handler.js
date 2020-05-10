@@ -2,6 +2,7 @@ import {config} from "../config";
 import * as firebase from "firebase/app";
 import 'firebase/auth';
 import 'firebase/firestore';
+import {setStoredValue} from "./utils";
 
 export class ContentHandler {
 
@@ -90,12 +91,8 @@ export class ContentHandler {
     async run() {
         this.initFirebase();
         this.userId = await this.getCurrentUserId();
-        if (!this.userId) {
-            debugger;
-            console.log('Not configured. Click on the extension\'s icon first');
-            alert('Click on the Spotify Web Watcher icon to set up');
-            return;
-        }
+
+        await setStoredValue({[config.storageKey]: this.userId});
 
         console.log('Current user', this.userId);
 
