@@ -25,8 +25,7 @@ export class PopupHandler {
 
     async run() {
         this.setText('Getting URL...');
-        const userId = await getStoredValue(config.storageKey);// [config.storageKey]
-        debugger;
+        const userId = (await getStoredValue(config.storageKey))[config.storageKey];
 
         // TODO: Listen for changes on the stored value and display the URL
 
