@@ -97,14 +97,21 @@ export class ContentHandler {
 
         console.log('Current user', this.userId);
 
-        const data = {
-            cover: this.getCover(),
-            song: this.getSong(),
-            artist: this.getArtist(),
-        };
+        const isUserLoggedIn = (await this.getCoverElement()) instanceof HTMLElement;
 
-        console.log('Now playing', data);
+        console.log({isUserLoggedIn});
 
+        if (isUserLoggedIn) {
+            await this.listenForMediaChanges();
+            await this.reportCurrentMedia();
+        } else {
+            console.warn('User is not logged in. Not watching for media changes');
+        }
+
+        console.log(`Spotify Watcher ${config.version} loaded`);
+    };
+
+    async listenForMediaChanges() {
         await this.watchForChanges(this.getCoverElement(), () => {
             this.updateNowPlaying({cover: this.getCover()});
         });
@@ -114,9 +121,18 @@ export class ContentHandler {
         await this.watchForChanges(this.getArtistElement(), () => {
             this.updateNowPlaying({artist: this.getArtist()});
         });
+    }
+
+    async reportCurrentMedia() {
+        const data = {
+            cover: this.getCover(),
+            song: this.getSong(),
+            artist: this.getArtist(),
+        };
+
+        console.log('Now playing', data);
 
         await this.updateNowPlaying(data);
+    }
 
-        console.log(`Spotify Watcher ${config.version} loaded`);
-    };
 }
