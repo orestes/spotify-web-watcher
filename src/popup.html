@@ -6,12 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify Web Watcher</title>
+    <style>
+    body {
+        margin: 0;
+        width: 200px;
+        padding: .5em;
+    }
+    label {
+        width: calc(100% - .5em);
+        display: block;
+    }
+    input {
+        width: 100%;
+    }
+    </style>
 </head>
 <body>
 
-<label for="url"><input id="url" type="text"></label>
-<button class="copy">Copy</button>
-<button class="open" style="display: none">Open Spotify Web Player</button>
+<div>
+    <label for="url"><input id="url" type="text"></label>
+</div>
+<div>
+    <button class="copy">Copy URL</button>
+    <button class="open" style="display: none">Open Spotify Web Player</button>
+</div>
 
 <script src="popup.js"></script>
 </body>
