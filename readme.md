@@ -7,9 +7,12 @@ This tool is meant to be used in live streaming software (like OBS)  as an embed
 # Usage
 
 0. Install the [Spotify Web Watcher](https://chrome.google.com/webstore/detail/bdmajojbomhndfchgmljkjihdpjhcefl) extension from the Chrome Web Store
-0. Open the [Spotify Web Player](https://open.spotify.com/) 
-0. Click on the extension icon and copy he given link
-0. Add a new "Browser" source to your OBS Scene using the given link
+0. Open [Spotify Web Player](https://open.spotify.com)
+0. Log-in into Spotify
+0. The extension icon will turn green
+0. Click on the extension icon
+0. Copy the URL
+0. Use it on your streaming software (OBS/SLOBS/XSplit) as a "browser" source
 
 ## Privacy
 
