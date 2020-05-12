@@ -1,13 +1,21 @@
 import {config} from '../config.js';
+import {getCurrentUserId} from "./utils";
 
 export class WelcomeHandler {
     async run() {
-        this.updateLogo();
         this.updateVersion();
+        await this.updateLogo();
+
+        chrome.storage.sync.onChanged.addListener(() => {
+            this.updateLogo();
+        });
     }
 
-    updateLogo() {
-        this.getLogoElement().setAttribute('src', 'icons/48x48-red.png');
+    async updateLogo() {
+        const userId = await getCurrentUserId();
+        const color = userId? 'green' : 'red';
+
+        this.getLogoElement().setAttribute('src', `icons/48x48-${color}.png`);
     }
 
     updateVersion() {

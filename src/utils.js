@@ -1,3 +1,5 @@
+import {config} from "../config";
+
 export const getStoredValue = async (key) => {
     return new Promise(((resolve, reject) => {
         chrome.storage.sync.get(key, (value) => {
@@ -29,4 +31,8 @@ export const setIcon = async (url) => {
             return resolve();
         })
     });
+};
+
+export const getCurrentUserId = async () => {
+    return (await getStoredValue(config.storageKey))[config.storageKey];
 };

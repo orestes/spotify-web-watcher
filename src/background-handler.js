@@ -1,14 +1,13 @@
-import {config} from "../config";
-import {getStoredValue, setIcon} from "./utils";
+import {getCurrentUserId, setIcon} from "./utils";
 
 export class BackgroundHandler {
     async run() {
-        const userId = await this.getCurrentUserId();
+        const userId = await getCurrentUserId();
         await this.updateIcon(userId);
 
-        chrome.storage.sync.onChanged.addListener((changes, namespace) => {
+        chrome.storage.sync.onChanged.addListener(async (changes, namespace) => {
             console.log('Changes in storage', {changes, namespace});
-            this.updateIcon();
+            this.updateIcon(await getCurrentUserId());
         });
 
         if (userId) {
@@ -26,9 +25,5 @@ export class BackgroundHandler {
     async updateIcon(userId) {
         const color = userId ? 'green' : 'red';
         await setIcon(`../../icons/48x48-${color}.png`);
-    }
-
-    async getCurrentUserId() {
-        return (await getStoredValue(config.storageKey))[config.storageKey];
     }
 }
