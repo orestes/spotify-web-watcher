@@ -8,6 +8,14 @@ export class BackgroundHandler {
             console.log('Changes in storage', {changes, namespace});
             this.updateIcon();
         });
+        chrome.runtime.onInstalled.addListener((details) => {
+            if (details.reason !== chrome.runtime.OnInstalledRease.INSTALL) {
+                return;
+            }
+
+            const welcomeUrl = chrome.extension.getURL("welcome.html");
+            chrome.tabs.create({url: welcomeUrl});
+        });
     }
 
     async updateIcon() {
