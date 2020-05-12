@@ -7,32 +7,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify Web Watcher</title>
     <style>
-    body {
-        margin: 0;
-        width: 200px;
-        padding: .5em;
-    }
-    label {
-        width: calc(100% - .5em);
-        display: block;
-    }
-    input {
-        width: 100%;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-size: 100%;
+        }
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+        }
+        .logo {
+            margin-right: .5em;
+        }
     </style>
 </head>
 <body>
 
-<h3>Thank you!</h3>
-<p>The Spotify Web Watcher extension has been installed. Let's configure it! it will only take a minute</p>
+<main>
+    <div class="hero">
+        <img class="logo" src="icons/48x48-green.png" alt="Spotify Web Watcher">
+        <h2>Spotify Web Watcher</h2>
+    </div>
 
-<pre>image with the red icon then an arrow then the green icon</pre>
+    <h4>Usage</h4>
+    <ol>
+        <li>Just play music on the Spotify Web Player</li>
+        <li>The music you're listening to will be displayed on your stream</li>
+    </ol>
 
-<ol>
-    <li>Open Spotify Web Player <a href="https://open.spotify.com" target="_blank">clicking here</a></li>
-    <li>Log-in into Spotify</li>
-    <li>The extension icon will turn green</li>
-</ol>
+    <pre>image with the red icon then an arrow then the green icon</pre>
+
+    <h4>Configuration (1 minute)</h4>
+    <ol>
+        <li>Open Spotify Web Player <a href="https://open.spotify.com" target="_blank">clicking here</a></li>
+        <li>Log-in into Spotify</li>
+        <li>The extension icon will turn green</li>
+        <li>Click on the extension icon</li>
+        <li>Copy the URL</li>
+        <li>Use it on your streaming software (OBS/SLOBS/XPlit) as a "browser" source</li>
+        <li>Done!</li>
+    </ol>
+</main>
+
+<footer>
+    <p>CC-BY 4.0 <a href="http://orestes.io" target="_blank">Orestes Carracedo</a><br/><a
+            href="https://github.com/orestes/spotify-web-watcher" target="_blank">Source code on GitHub</a></p>
+</footer>
 
 </body>
 </html>
