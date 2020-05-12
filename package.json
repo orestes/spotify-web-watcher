@@ -5,6 +5,7 @@
   "main": "config.js",
   "scripts": {
     "build": "rm -Rf dist/*; cp manifest.json src/popup.html src/welcome.html dist; cp -R icons dist; parcel build src/content.js src/popup.js src/background.js src/welcome.js && node tools/replace-bad-character.js dist/*.js",
+    "package":  "cd dist && zip -r ../spotify-web-watcher.zip .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
