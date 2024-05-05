@@ -16,8 +16,8 @@
 		"url": "git+https://github.com/orestes/spotify-web-watcher.git"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "CC-BY-4.0",
+	"author": "Orestes Carracedo <orestes@orestes.io>",
+	"license": "GPL-3.0-or-later",
 	"bugs": {
 		"url": "https://github.com/orestes/spotify-web-watcher/issues"
 	},
