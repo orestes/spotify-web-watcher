@@ -20,4 +20,4 @@ I don't collect any of your data. All data is stored anonymously and is not shar
 
 ## License
 
-[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
+[GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html)
