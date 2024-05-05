@@ -1,29 +1,29 @@
 {
-  "name": "spotify-web-watcher",
-  "version": "2.0.0",
-  "description": "A Chrome Extension that watches the Spotify Web Player and reports what you are playing on a private web page.",
-  "scripts": {
-    "prebuild": "rm -Rf dist/*",
-    "build": "esbuild src/**/*.js  --outdir=dist",
-    "postbuild": "cp manifest.json src/popup.html src/welcome.html dist && cp -R icons dist",
-    "package": "cd dist && zip -r ../spotify-web-watcher.zip ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/orestes/spotify-web-watcher.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "CC-BY-4.0",
-  "bugs": {
-    "url": "https://github.com/orestes/spotify-web-watcher/issues"
-  },
-  "homepage": "https://github.com/orestes/spotify-web-watcher#readme",
-  "devDependencies": {
-    "esbuild": "0.20.2",
-    "firebase": "^7.14.2"
-  },
-  "browserslist": [
-    "last 1 Chrome versions"
-  ]
+	"name": "spotify-web-watcher",
+	"version": "2.0.0",
+	"description": "A Chrome Extension that watches the Spotify Web Player and reports what you are playing on a private web page.",
+	"scripts": {
+		"prebuild": "rm -Rf dist/*",
+		"build": "esbuild src/**/*.js  --outdir=dist",
+		"postbuild": "cp manifest.json src/popup.html src/welcome.html dist && cp -R icons dist",
+		"package": "cd dist && zip -r ../spotify-web-watcher.zip ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/orestes/spotify-web-watcher.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "CC-BY-4.0",
+	"bugs": {
+		"url": "https://github.com/orestes/spotify-web-watcher/issues"
+	},
+	"homepage": "https://github.com/orestes/spotify-web-watcher#readme",
+	"devDependencies": {
+		"esbuild": "0.20.2",
+		"firebase": "^7.14.2"
+	},
+	"browserslist": [
+		"last 1 Chrome versions"
+	]
 }
