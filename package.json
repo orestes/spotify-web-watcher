@@ -23,15 +23,14 @@
 	},
 	"homepage": "https://github.com/orestes/spotify-web-watcher#readme",
 	"devDependencies": {
+		"cpx": "^1.5.0",
 		"cross-zip-cli": "^1.0.0",
     "esbuild": "0.20.2",
 		"firebase": "^7.14.2",
-    "rimraf": "^5.0.5"
+		"prettier": "^3.2.5",
+		"rimraf": "^5.0.5"
 	},
 	"browserslist": [
 		"last 1 Chrome versions"
-	],
-  "dependencies": {
-    "cpx": "^1.5.0"
-  }
+	]
 }
