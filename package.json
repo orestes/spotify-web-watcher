@@ -2,6 +2,9 @@
 	"name": "spotify-web-watcher",
 	"version": "2.0.0",
 	"description": "A Chrome Extension that watches the Spotify Web Player and reports what you are playing on a private web page.",
+	"engines": {
+		"node": "20"
+	},
 	"scripts": {
 		"prebuild": "rimraf --glob {build,dist}/*",
 		"build": "esbuild src/**/*.js  --outdir=build",
