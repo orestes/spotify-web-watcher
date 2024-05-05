@@ -1,10 +1,10 @@
 {
-  "name": "Spotify Web Watcher",
-  "version": "2.0",
-  "description": "Watch over the Spotify Web Player and report the current song, artist and cover",
-  "manifest_version": 3,
-  "action": {
-    "default_popup": "src/popup.html",
-    "default_icon": "icons/48x48-white.png"
-  }
+	"name": "Spotify Web Watcher",
+	"version": "2.0",
+	"description": "Watch over the Spotify Web Player and report the current song, artist and cover",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "src/popup.html",
+		"default_icon": "icons/48x48-white.png"
+	}
 }
