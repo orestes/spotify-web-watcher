@@ -1,5 +1,5 @@
 export const config = {
-    version: '1.1.0',
+    version: '2.0.0',
     debounceTime: 100,
     storageKey: 'userId',
     baseUrl: 'https://spotify-watcher-185e9.web.app',
