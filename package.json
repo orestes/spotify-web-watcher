@@ -23,6 +23,7 @@
 	},
 	"homepage": "https://github.com/orestes/spotify-web-watcher#readme",
 	"devDependencies": {
+		"@types/chrome": "^0.0.267",
 		"esbuild": "0.20.2",
 		"firebase": "^10.11.1",
 		"prettier": "^3.2.5"
