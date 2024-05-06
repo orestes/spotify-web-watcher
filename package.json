@@ -7,8 +7,8 @@
 	},
 	"scripts": {
 		"prebuild": "rm -Rf {build,dist}/*",
-		"build": "esbuild src/**/*.js --outdir=build",
-		"postbuild": "cp -r {manifest.json,icons,src/*.html} build",
+		"build": "esbuild --sourcemap --minify src/**/*.js --outdir=build --outbase=.",
+		"postbuild": "cp --parents -R {manifest.json,icons,src/*.html} build",
 		"package": "zip build dist/spotify-web-watcher.zip"
 	},
 	"repository": {
