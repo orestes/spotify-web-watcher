@@ -6,5 +6,10 @@
 	"action": {
 		"default_popup": "src/popup.html",
 		"default_icon": "icons/48x48-white.png"
+	"background": {
+		"service_worker": "/src/service-worker.js",
+		"type": "module"
+	},
+	"action": {},
 	}
 }
