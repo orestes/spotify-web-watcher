@@ -1,6 +1,7 @@
 export const config = {
 	version: "2.0.0",
 	debounceTime: 100,
+	// TODO: Use this key only once, as a a prefix
 	storageKey: "userId",
 	baseUrl: "https://spotify-watcher-185e9.web.app",
 	firebase: {
