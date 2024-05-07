@@ -3,6 +3,9 @@
 	"name": "spotify-web-watcher",
 	"version": "2.0.0",
 	"description": "A web browser extension that watches the Spotify Web Player and reports what you are playing on a separate, private web page.",
+	"author": "Orestes Carracedo <orestes@orestes.io>",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://github.com/orestes/spotify-web-watcher#readme",
 	"engines": {
 		"node": "22"
 	},
@@ -17,12 +20,9 @@
 		"url": "git+https://github.com/orestes/spotify-web-watcher.git"
 	},
 	"keywords": [],
-	"author": "Orestes Carracedo <orestes@orestes.io>",
-	"license": "GPL-3.0-or-later",
 	"bugs": {
 		"url": "https://github.com/orestes/spotify-web-watcher/issues"
 	},
-	"homepage": "https://github.com/orestes/spotify-web-watcher#readme",
 	"devDependencies": {
 		"@types/chrome": "^0.0.267",
 		"esbuild": "0.20.2",
