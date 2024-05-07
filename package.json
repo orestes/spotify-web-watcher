@@ -15,14 +15,6 @@
 		"postbuild": "cp --parents -R {manifest.json,icons,src/*.html} build",
 		"package": "zip build dist/spotify-web-watcher.zip"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/orestes/spotify-web-watcher.git"
-	},
-	"keywords": [],
-	"bugs": {
-		"url": "https://github.com/orestes/spotify-web-watcher/issues"
-	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.267",
 		"esbuild": "0.20.2",
