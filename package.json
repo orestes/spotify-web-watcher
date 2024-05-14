@@ -12,8 +12,9 @@
 	"scripts": {
 		"prebuild": "rm -Rf {build,dist}/*",
 		"build": "esbuild --sourcemap --minify src/**/*.js --outdir=build --outbase=.",
-		"postbuild": "cp --parents -R {manifest.json,icons,src/*.html} build",
-		"package": "zip build dist/spotify-web-watcher.zip"
+		"postbuild": "cp -a {src/*.html,assets,manifest.json} build",
+		"dist": "zip -vr dist/spotify-web-watcher.zip build/*",
+		"ship": "npm run build && npm run dist"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.267",
