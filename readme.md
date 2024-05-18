@@ -4,6 +4,8 @@ A web browser extension that watches the Spotify Web Player and reports what you
 
 This tool is meant to be used in live-streaming software (like OBS) as an embedded web view that displays what you're listening to at the moment.
 
+![now-playing-screenshot.png](assets/now-playing-screenshot.png)
+
 # Usage
 
 0. Open the [Spotify Web Watcher on the Chrome Web Store](https://chrome.google.com/webstore/detail/bdmajojbomhndfchgmljkjihdpjhcefl)
