@@ -12,6 +12,7 @@
 		"service_worker": "/src/service-worker.js",
 		"type": "module"
 	},
+	"permissions": ["activeTab", "scripting"],
 	"action": {},
 	"icons": {
 		"128": "/assets/now-playing-logo.png"
