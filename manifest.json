@@ -1,42 +1,20 @@
 {
-  "name": "Spotify Web Watcher",
-  "version": "1.1.0",
-  "description": "Watch over the Spotify Web Player and report the current song, artist and cover",
-  "manifest_version": 2,
-  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://cdn.firebase.com https://www.googleapis.com; object-src 'self'",
-  "permissions": [
-    "storage"
-  ],
-  "icons": {
-    "16": "icons/16x16-green.png",
-    "48": "icons/48x48-green.png",
-    "128": "icons/128x128-green.png"
-  },
-  "web_accessible_resources": [
-    "icons/*.png"
-  ],
-  "browser_action": {
-    "default_icon": {
-      "16": "icons/48x48-white.png",
-      "32": "icons/48x48-white.png",
-      "48": "icons/48x48-white.png"
-    },
-    "default_title": "Spotify Web Watcher",
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://open.spotify.com/*"
-      ],
-      "js": [
-        "content.js"
-      ]
-    }
-  ]
+	"name": "Spotify Web Watcher",
+	"author": {
+		"email": "orestes@orestes.io"
+	},
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj1MkpRRPLIwePX2GENAkS3odEcUczgH615B1w3zK+AbrJwX3L3XkzkO/likdwaRBwq+DyMmZLPOcGRn5+g117lwQYrckUvp/89hW+iHcOVI83I90lowmNDBQyZZRF600DVCeVwjWRGz336JckG29qJx7rJCjLdBhxZ5zeGdRtR1lYdsBGqF2XaWA+V/BOEt0QmDWAYfVXk4Z3LA1mY/n/VvC/xK6AqwdIOXkg9xY0N8YjodS2rKhDUPcaegog/79eNl121EbK0qxC5sGQKkhwr5EVa9tdNyuL7vZJDwyu6NdXwTO89q4quL/N0Uxpwfuo09XrHpkGu7TojlJVm6U5QIDAQAB",
+	"version": "2.0",
+	"description": "Watch over the Spotify Web Player and report the current song, artist and cover",
+	"manifest_version": 3,
+	"homepage_url": "https://github.com/orestes/spotify-web-watcher",
+	"background": {
+		"service_worker": "/src/service-worker.js",
+		"type": "module"
+	},
+	"permissions": ["activeTab", "scripting"],
+	"action": {},
+	"icons": {
+		"128": "/assets/now-playing-logo.png"
+	}
 }
-
