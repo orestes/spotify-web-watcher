@@ -1,36 +1,17 @@
 import {config} from "../config";
 
+// Manifest V3 gives every one of these a promise-returning form, which replaces
+// the callback wrappers this file used to hand-roll.
 export const getStoredValue = async (key) => {
-    return new Promise(((resolve, reject) => {
-        chrome.storage.sync.get(key, (value) => {
-            if (chrome.runtime.error) {
-                return reject(chrome.runtime.error);
-            }
-
-            return resolve(value);
-        });
-    }));
+    return chrome.storage.sync.get(key);
 };
+
 export const setStoredValue = async (values) => {
-    return new Promise(((resolve, reject) => {
-        chrome.storage.sync.set(values, (value) => {
-            if (chrome.runtime.error) {
-                return reject(chrome.runtime.error);
-            }
-            return resolve(value);
-        });
-    }));
+    return chrome.storage.sync.set(values);
 };
-export const setIcon = async (url) => {
-    return new Promise((resolve, reject) => {
-        chrome.browserAction.setIcon({path: url}, () => {
-            if (chrome.runtime.error) {
-                return reject(chrome.runtime.error);
-            }
 
-            return resolve();
-        })
-    });
+export const setIcon = async (path) => {
+    return chrome.action.setIcon({path});
 };
 
 export const getCurrentUserId = async () => {
