@@ -1,18 +1,7 @@
-import "firebase/auth";
-import * as firebase from "firebase/app";
-
 import {config} from '../config.js';
 import {getStoredValue} from "./utils";
 
 export class PopupHandler {
-    async signInAnonymously() {
-        firebase.initializeApp(config.firebase);
-
-        const {user} = await firebase.auth().signInAnonymously();
-
-        return user.uid;
-    };
-
     setText(text) {
         document.querySelector('input').setAttribute('value', text);
     }
@@ -56,4 +45,3 @@ export class PopupHandler {
         return document.querySelector('button.open');
     }
 }
-
